@@ -1,0 +1,6 @@
+{
+  "name": "TokenBudgeter",
+  "description": "Open-source AI usage analytics, cost optimization, and decision-support platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

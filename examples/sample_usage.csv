@@ -1,0 +1,8 @@
+timestamp,provider,model,project,task,source,prompt_tokens,completion_tokens,cached_tokens,cost_usd,duration_ms,status,retry_count
+2026-10-25T14:30:00Z,openai,gpt-4o,BackendRefactor,api_codegen,cursor,2450,480,0,0.0195,1420,success,0
+2026-10-25T14:32:00Z,openai,gpt-4o,BackendRefactor,api_codegen,cursor,2450,480,2450,0.0097,850,success,0
+2026-10-25T15:00:00Z,anthropic,claude-3-5-sonnet,PRReviewBot,code_security_scan,api_gateway,85000,620,0,0.2643,5100,success,0
+2026-10-25T15:15:00Z,anthropic,claude-3-5-sonnet,PRReviewBot,code_security_scan,api_gateway,85000,620,80000,0.0643,2300,success,0
+2026-10-25T16:00:00Z,openai,gpt-4o-mini,DataExtraction,json_parse,cli,800,150,0,0.0002,320,success,0
+2026-10-25T16:05:00Z,openai,gpt-4o,DataExtraction,json_parse,cli,800,150,0,0.0035,940,failed,3
+2026-10-25T16:10:00Z,google,gemini-1.5-flash,DocsBot,qna,aider,1500,200,0,0.0003,450,success,0
