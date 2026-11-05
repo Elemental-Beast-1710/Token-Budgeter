@@ -3,9 +3,13 @@ name: TokenBudgeter CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
   pull_request:
-    branches: [main]
+    branches:
+      - main
+
   workflow_dispatch:
 
 permissions:
@@ -13,22 +17,33 @@ permissions:
 
 jobs:
   build-and-test:
+    name: Build and Test TokenBudgeter
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Download repository source code
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Configure Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
+      # 3. Install project dependencies
       - name: Install dependencies
         run: npm install
 
+      # 4. Run project tests
       - name: Run tests
         run: npm test -- --run
 
+      # 5. Build production application
       - name: Build application
         run: npm run build
+
+      # 6. Report successful completion
+      - name: CI completed
+        if: success()
+        run: echo "TokenBudgeter passed all CI checks!"
